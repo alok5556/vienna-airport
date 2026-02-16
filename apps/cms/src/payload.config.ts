@@ -1,10 +1,12 @@
 import path from 'path'
 import { buildConfig } from 'payload'
+import { postgresAdapter } from '@payloadcms/db-postgres'
 import { fileURLToPath } from 'url'
 
 import { Media } from './collections/Media'
 import { Pages } from './collections/Pages'
 import { SiteSettings } from './globals/SiteSettings'
+import { Users } from './collections/Users'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -40,7 +42,12 @@ export default buildConfig({
     defaultLocale: 'en',
     fallback: true,
   },
-  collections: [Pages, Media],
+  db: postgresAdapter({
+    pool: {
+      connectionString: process.env.DATABASE_URL || 'postgresql://postgres:postgres@localhost:5432/vienna_airport',
+    },
+  }),
+  collections: [Users, Pages, Media],
   globals: [SiteSettings],
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),

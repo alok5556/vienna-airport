@@ -15,7 +15,7 @@ Monorepo starter for:
 ## Quick start
 
 1. Install dependencies in each workspace (`npm install` at repo root).
-2. Set environment variables for PostgreSQL + Payload.
+2. Set environment variables for PostgreSQL + Payload (`DATABASE_URL`, `PAYLOAD_SECRET`, `FRONTEND_URL`).
 3. Run:
    - `npm run dev:cms`
    - `npm run dev:web`
@@ -24,3 +24,9 @@ Monorepo starter for:
 
 This starter focuses on CMS + frontend baseline and architecture that matches your requirements list.
 Vendure integration can be added as `apps/commerce` or separate service later.
+
+
+## First CMS admin user
+
+A `users` auth collection is preconfigured for Payload admin login.
+Create the first user at first run, then assign role `admin` in the CMS.
