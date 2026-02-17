@@ -10,14 +10,14 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@vendure/admin-ui-plugin": "^2.0.0",
-    "@vendure/core": "^2.0.0",
-    "dotenv": "^16.4.5",
-    "sqlite3": "^5.1.7",
+    "@vendure/admin-ui-plugin": "2.3.3",
+    "@vendure/core": "2.3.3",
+    "dotenv": "16.4.5",
+    "sqlite3": "5.1.7",
     "@va/config": "workspace:*"
   },
   "devDependencies": {
-    "ts-node": "^10.9.2",
-    "typescript": "^5.5.3"
+    "ts-node": "10.9.2",
+    "typescript": "5.5.3"
   }
 }

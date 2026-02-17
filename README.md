@@ -32,3 +32,17 @@ apps/
 packages/
   config/    # shared i18n config
 ```
+
+
+## Runtime requirements
+
+- Node.js **20.x or 22.x LTS** (Node 24 is not supported in this starter)
+- pnpm **9+**
+
+If you previously ran install on Node 24, clean and retry:
+
+```bash
+rm -rf node_modules pnpm-lock.yaml
+pnpm store prune
+pnpm install
+```
