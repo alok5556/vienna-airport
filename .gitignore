@@ -9,3 +9,6 @@ build
 tmp
 coverage
 *.log
+
+!packages/config/dist/
+!packages/config/dist/**

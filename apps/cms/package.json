@@ -4,8 +4,8 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "payload dev",
-    "build": "payload build",
+    "dev": "payload dev --config ./src/payload.config.ts",
+    "build": "payload build --config ./src/payload.config.ts",
     "lint": "echo 'No lint configured for cms'",
     "typecheck": "tsc --noEmit"
   },

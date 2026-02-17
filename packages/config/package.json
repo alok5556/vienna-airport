@@ -4,6 +4,9 @@
   "private": true,
   "type": "module",
   "exports": {
-    "./i18n": "./src/i18n.ts"
+    "./i18n": {
+      "types": "./dist/i18n.d.ts",
+      "default": "./dist/i18n.js"
+    }
   }
 }
