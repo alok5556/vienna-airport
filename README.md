@@ -17,7 +17,7 @@ Monorepo starter for:
 1. Install dependencies in each workspace (`npm install` at repo root).
 2. Set environment variables for PostgreSQL + Payload (`DATABASE_URL`, `PAYLOAD_SECRET`, `FRONTEND_URL`).
 3. Run:
-   - `npm run dev:cms` (uses `payload run` under the hood for Payload 3)
+   - `npm run dev:cms` (uses `payload run src/payload.config.ts` under the hood for Payload 3)
    - `npm run dev:web`
 
 ## Notes

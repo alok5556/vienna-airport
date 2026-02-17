@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "payload run",
+    "dev": "payload run src/payload.config.ts",
     "build": "payload generate:types && payload generate:importmap",
     "lint": "echo 'Add eslint config for cms'"
   },
