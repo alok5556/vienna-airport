@@ -1,0 +1,9 @@
+{
+  "name": "@va/config",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./i18n": "./src/i18n.ts"
+  }
+}
