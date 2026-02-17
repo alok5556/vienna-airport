@@ -4,8 +4,8 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "payload dev --config ./src/payload.config.ts",
-    "build": "payload build --config ./src/payload.config.ts",
+    "dev": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts payload dev",
+    "build": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts payload build",
     "lint": "echo 'No lint configured for cms'",
     "typecheck": "tsc --noEmit"
   },

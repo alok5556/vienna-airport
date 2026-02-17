@@ -51,5 +51,5 @@ pnpm install
 ## Notes for Windows
 
 - Vendure dev server uses `tsx` to run TypeScript ESM entrypoints reliably on Windows.
-- Payload commands use an explicit config path (`--config ./src/payload.config.ts`) to avoid auto-discovery issues in some shell/path setups.
+- Payload commands set `PAYLOAD_CONFIG_PATH=src/payload.config.ts` to avoid Payload CLI config auto-discovery issues in some Windows shell/path setups.
 - Shared `@va/config` exports precompiled JS in `dist/` so runtime tools (Next config, Node ESM) do not import raw `.ts` files.
