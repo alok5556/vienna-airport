@@ -1,0 +1,27 @@
+{
+  "name": "vienna-airport-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev:cms & npm run dev:web & npm run dev:shop & wait",
+    "build": "npm run build -w @vienna/web && npm run build -w @vienna/cms && npm run build -w @vienna/shop",
+    "start": "npm run start:cms & npm run start:web & npm run start:shop & wait",
+    "dev:cms": "npm run dev -w @vienna/cms",
+    "dev:web": "npm run dev -w @vienna/web",
+    "dev:shop": "npm run dev -w @vienna/shop",
+    "start:cms": "npm run start -w @vienna/cms",
+    "start:web": "npm run start -w @vienna/web",
+    "start:shop": "npm run start -w @vienna/shop",
+    "typecheck": "npm run typecheck -ws"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}
