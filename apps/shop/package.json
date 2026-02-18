@@ -1,0 +1,23 @@
+{
+  "name": "shop",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vendure dev",
+    "build": "vendure build",
+    "start": "vendure start",
+    "typecheck": "tsc --noEmit",
+    "lint": "echo 'no lint configured'"
+  },
+  "dependencies": {
+    "@vendure/admin-ui-plugin": "2.0.0",
+    "@vendure/core": "2.0.0",
+    "graphql": "^16.10.0",
+    "@va/types": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "@types/node": "^22.10.1"
+  }
+}

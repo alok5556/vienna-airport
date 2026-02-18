@@ -1,0 +1,33 @@
+{
+  "name": "cms",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "payload dev",
+    "build": "payload build",
+    "start": "payload start",
+    "typecheck": "tsc --noEmit",
+    "lint": "echo 'no lint configured'"
+  },
+  "dependencies": {
+    "@payloadcms/bundler-webpack": "3.76.1",
+    "@payloadcms/db-postgres": "3.76.1",
+    "@payloadcms/live-preview-react": "3.76.1",
+    "@payloadcms/next": "3.76.1",
+    "@payloadcms/plugin-cloud-storage": "3.76.1",
+    "@payloadcms/plugin-seo": "3.76.1",
+    "@payloadcms/richtext-lexical": "3.76.1",
+    "cron": "^3.3.2",
+    "dotenv": "^16.4.7",
+    "payload": "3.76.1",
+    "sharp": "^0.33.5",
+    "zod": "^3.24.1",
+    "@va/types": "workspace:*",
+    "@va/config": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "typescript": "^5.7.3"
+  }
+}

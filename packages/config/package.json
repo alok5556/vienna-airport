@@ -1,0 +1,16 @@
+{
+  "name": "@va/config",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "echo 'no lint configured'"
+  },
+  "dependencies": {
+    "zod": "^3.24.1"
+  }
+}

@@ -1,0 +1,39 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres:15
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: vienna_airport
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  cms:
+    build:
+      context: .
+      dockerfile: apps/cms/Dockerfile
+    env_file:
+      - apps/cms/.env.example
+    depends_on:
+      - postgres
+    ports:
+      - '3001:3001'
+
+  shop:
+    build:
+      context: .
+      dockerfile: apps/shop/Dockerfile
+    env_file:
+      - apps/shop/.env.example
+    depends_on:
+      - postgres
+    ports:
+      - '3002:3002'
+
+volumes:
+  postgres_data:
